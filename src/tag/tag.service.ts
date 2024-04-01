@@ -7,10 +7,10 @@ import { TagEntity } from './tag.entity';
 export class TagService {
   constructor(
     @InjectRepository(TagEntity)
-    private readonly TagRepository: Repository<TagEntity>,
+    private readonly tagRepository: Repository<TagEntity>,
   ) {}
 
   async findAll(): Promise<TagEntity[]> {
-    return await this.TagRepository.find();
+    return await this.tagRepository.find();
   }
 }
